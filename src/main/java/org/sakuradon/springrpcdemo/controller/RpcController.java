@@ -17,8 +17,12 @@ import java.lang.reflect.Method;
 @RestController
 public class RpcController {
 
-    @Autowired
     ApplicationContext applicationContext;
+
+    @Autowired
+    public void setApplicationContext(ApplicationContext applicationContext) {
+        this.applicationContext = applicationContext;
+    }
 
     @PostMapping("/rpc")
     public HttpRpcResponseEntity rpc(@RequestBody HttpRpcRequestEntity request) {
@@ -59,4 +63,5 @@ public class RpcController {
 
         return null;
     }
+
 }

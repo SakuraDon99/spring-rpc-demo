@@ -34,4 +34,5 @@ public class HttpRpcRequestEntity {
     public void setArgs(Object[] args) {
         this.args = args;
     }
+
 }

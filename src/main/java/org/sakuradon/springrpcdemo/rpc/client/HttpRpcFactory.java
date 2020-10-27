@@ -15,9 +15,7 @@ import java.lang.reflect.Proxy;
  * @author SakuraDon
  */
 @Component
-public class HttpRpcFactory implements ApplicationContextAware {
-
-    ApplicationContext applicationContext;
+public class HttpRpcFactory {
 
     private RestTemplate restTemplate;
 
@@ -39,8 +37,4 @@ public class HttpRpcFactory implements ApplicationContextAware {
         return (T) Proxy.newProxyInstance(stubClass.getClassLoader(), new Class[]{stubClass}, p);
     }
 
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = applicationContext;
-    }
 }

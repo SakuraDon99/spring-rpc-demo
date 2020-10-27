@@ -13,10 +13,8 @@ class SpringRpcDemoApplicationTests {
     private DemoServiceClient demoServiceClient;
 
     @Test
-    void contextLoads() {
-
+    void testRpc() {
         String res = demoServiceClient.testHttpRpc("test");
-
         System.out.println(res);
     }
 
